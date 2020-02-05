@@ -14,8 +14,8 @@ class Api::RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new(
+                         user_id: current_user.id,
                          title: params[:title],
-                         chef: params[:chef],
                          ingredients: params[:ingredients],
                          directions: params[:directions],
                          prep_time: params[:prep_time]
