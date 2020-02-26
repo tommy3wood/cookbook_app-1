@@ -1,6 +1,10 @@
 class Recipe < ApplicationRecord
   belongs_to :user
 
+  validates :prep_time, presence: true
+  validates :prep_time, numericality: {greater_than: 0}
+  validates :title, presence: true
+
   def ingredients_list
     ingredients.split(", ")
   end

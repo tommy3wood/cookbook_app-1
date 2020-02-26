@@ -6,6 +6,7 @@
   directions: recipe.directions, 
   image_url: recipe.image_url, 
   prep_time: recipe.prep_time, 
+  created_at: recipe.created_at, 
   formatted: { 
     prep_time: recipe.friendly_prep_time, 
     ingredients: recipe.ingredients_list, 
