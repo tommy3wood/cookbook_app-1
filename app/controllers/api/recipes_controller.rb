@@ -1,4 +1,6 @@
 class Api::RecipesController < ApplicationController
+  before_action :authenticate_user, only: [:create, :update]
+  
   def index
     search_term = params[:search]
     @recipes = Recipe.all
